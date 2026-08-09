@@ -1,11 +1,7 @@
 {
-  description = "A very basic flake";
+  description = "A very basic flake for converting a nix-organized attrset into gtk css.";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-  };
-
-  outputs = { self, nixpkgs }: {
+  outputs = {
     lib = import ./module;
   };
 }
