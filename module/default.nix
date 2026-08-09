@@ -1,10 +1,7 @@
 let
   genDeclaration = prop: val: "  ${prop}: ${val};";
-  genSelectors = selectors: map (selector: "#${selector}") selectors;
 
-  selectorText = cssAttrs:
-    builtins.concatStringsSep ",\n"
-      (genSelectors cssAttrs.selectors);
+  selectorText = cssAttrs: builtins.concatStringsSep ",\n" cssAttrs.selectors;
 
   declarationText = cssAttrs:
     builtins.concatStringsSep "\n"
