@@ -1,5 +1,5 @@
 let
-  genDeclaration = prop: val: "${prop}: ${val};";
+  genDeclaration = prop: val: "  ${prop}: ${val};";
   genSelectors = selectors: builtins.concatStringsSep " " selectors;
 
   selectorText = cssAttrs:
@@ -13,7 +13,7 @@ let
 
   ruleText = cssAttrs: ''
     ${selectorText cssAttrs} {
-      ${declarationText cssAttrs}
+    ${declarationText cssAttrs}
     }
   '';
 
